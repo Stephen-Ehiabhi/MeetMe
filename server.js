@@ -9,7 +9,13 @@ const io = new Server(server);
 const { PORT } = require("./config/config.js");
 
 io.on('connection', (socket)=>{
-    console.log("connection created!!");
+    console.log("Socket established!");
+    socket.on("message", (msg)=>{
+        socket.broadcast.emit("chat-message", {message: msg})
+    })
+    socket.on("disconnect",()=>{
+        console.log("Socket terminated!");
+    })
 })
 
 app.get('/', (req,res)=>{

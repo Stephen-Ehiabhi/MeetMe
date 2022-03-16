@@ -7,10 +7,31 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div>
+
+    </div>
+    <form class="send-message">
+        <input class="message-input"/>
+        <button type="submit">Send</button>
+    </form>
 </body>
 <script src="/socket.io/socket.io.js"></script>
 <script>
     var socket = io();
+    const form = document.querySelector('.send-message')
+    const msgI = document.querySelector('.message-input')
+
+    form.addEventListener('submit', (e)=> handleSubmit(e))
+
+    function handleSubmit(e){
+      e.preventDefault()
+      const message = msgI.value;
+      socket.emit("message", message)
+    }
+
+    socket.on("chat-message", (msg) => {
+        console.log(msg.message + "hfhhff");
+    })
+
 </script>
 </html>
