@@ -1,15 +1,19 @@
 const express = require("express");
 const app = express();
 const http = require("http");
-const server = http.createServer()
+const server = http.createServer(app)
 const {Server} = require("socket.io")
 const io = new Server(server);
 
 //module to hide sensitive data
 const { PORT } = require("./config/config.js");
 
-io.on("connection", (socket)=>{
+io.on('connection', (socket)=>{
     console.log("connection created!!");
+})
+
+app.get('/', (req,res)=>{
+   res.sendFile(__dirname + "/index.html")
 })
 
 //intiating the listen method to enable server listen for requests
