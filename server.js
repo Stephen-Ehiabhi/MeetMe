@@ -1,13 +1,19 @@
 const express = require("express");
-const io = require("socket.io")
+const app = express();
+const http = require("http");
+const server = http.createServer()
+const {Server} = require("socket.io")
+const io = new Server(server);
 
 //module to hide sensitive data
 const { PORT } = require("./config/config.js");
 
-const app = express();
+io.on("connection", (socket)=>{
+    console.log("connection created!!");
+})
 
 //intiating the listen method to enable server listen for requests
-app.listen(PORT,(err)=>{
-    if(err) console.log(`Error listening on Port ${PORT}`);
-  console.log(`Server listening on Port ${PORT}`);
+server.listen(PORT, (err) => {
+    if (err) console.log(`Error listening on Port ${PORT}`);
+    console.log(`Server listening on Port ${PORT}`);
 })
