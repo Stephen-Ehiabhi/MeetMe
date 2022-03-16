@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <p class="status"></p>
     <div class="chat-box"></div>
     <form class="send-message">
         <input class="message-input" />
@@ -22,15 +23,26 @@
     const form = document.querySelector('.send-message')
     const msgI = document.querySelector('.message-input')
     const chatBox = document.querySelector('.chat-box');
+    const status = document.querySelector('.status');
+
 
     form.addEventListener('submit', (e) => handleSubmit(e))
 
     function handleSubmit(e) {
         e.preventDefault()
         const message = msgI.value;
+        appendMessage("You: " + message)
         socket.emit("message", message)
-        message = ""
+        msgI.value = "";
     }
+
+    socket.on("user-connected", (msg) => {
+        status.innerText = msg;
+    })
+
+    socket.on("user-disconnected", (msg) => {
+        status.innerText = msg;
+    })
 
     socket.on("chat-message", (msg) => {
         appendMessage(msg.message)
