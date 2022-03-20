@@ -55,13 +55,13 @@ This microservice is used to create a reusable response function.
 #### Add new follower
 
 ```http
-  GET /api/user/${id}?userID=${userID}
+  GET /api/user/${id}/follow?username=${username}
 ```
 
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
 | `id`      | `string` | **Required**. Id of the current user |
-| `userID`  | `query string` | **Required**. Id of the user the current user wants to follow |
+| `username`  | `query string` | **Required**. username of the user the current user wants to follow |
 
 #### Update single User
 

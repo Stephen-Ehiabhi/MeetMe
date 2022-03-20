@@ -23,7 +23,7 @@ module.exports = {
     }
   },
   //add follower
-  addFollower: async (req, res) => {
+  followUser: async (req, res) => {
     try {
       //get user and find the user, the current user wants to follow follow
       const currentUser = await User.findOne({_id: req.params.id});
@@ -41,6 +41,14 @@ module.exports = {
       await friend.save();
       //response
       response(res, 200, `You followed ${friend.username}`);
+    } catch (error) {
+      response(res, 400, error.message);
+    }
+  },
+  //remove follower
+  unFollowUser: async (req, res) => {
+    try {
+      response(res, 200, `You unfollowed ${friend.username}`);
     } catch (error) {
       response(res, 400, error.message);
     }
