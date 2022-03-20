@@ -5,6 +5,10 @@ const UserModel = new Schema({
     type: String,
     required: true,
   },
+  email: {
+type: String,
+required: 
+  },
   isCreated: {
     type: new Date.now(),
   },
