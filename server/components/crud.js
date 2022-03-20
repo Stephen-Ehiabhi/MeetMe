@@ -21,18 +21,24 @@ module.exports = {
 
   readSingle: async (req, res) => {
     try {
-       //find single saved data with the id from the route paramater
-       const singleData = await model.findOne(req.params.id);
-       //respond with success
-       response(res, 200, singleData);
+      //find single saved data with the id from the route paramater
+      const singleData = await model.findOne(req.params.id);
+      //respond with success
+      response(res, 200, singleData);
     } catch (error) {
       response(res, 400, error);
     }
   },
 
-  update: (req, res) => {
+  updateOne: async (req, res, key, value) => {
     try {
-      response(res, 200, "New User Created");
+      //find all the saved data
+      const allData = await model.findOne(req.params.id);
+      //edit the data in the model
+      allData.key = value;
+      //save the updated data
+      await allData.save();
+      response(res, 200, allData);
     } catch (error) {
       response(res, 400, error);
     }
@@ -40,7 +46,10 @@ module.exports = {
 
   delete: (req, res) => {
     try {
-      response(res, 200, "New User Created");
+      //find single data and delete
+      await model.deleteOne(req.params.id);
+
+      response(res, 200, "deleted");
     } catch (error) {
       response(res, 400, error);
     }
