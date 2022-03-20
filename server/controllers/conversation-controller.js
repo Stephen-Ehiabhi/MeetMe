@@ -1,4 +1,4 @@
-const conversation = require("../models/Conversation");
+const Conversation = require("../models/Conversation");
 const {
   createOne,
   readAll,
@@ -12,7 +12,7 @@ module.exports = {
   //create
   createConversation: (req, res) => {
     try {
-      createOne(req, conversation);
+      createOne(req, Conversation);
       response(res, 200, "new conversation created");
     } catch (error) {
       response(res, 400, error);
@@ -20,18 +20,18 @@ module.exports = {
   },
   //read all
   readAllConversations: (req, res) => {
-    readAll(res, conversation);
+    readAll(res, Conversation);
   },
   //read one
   readConversation: (req, res) => {
-    readOne(req, res, conversation);
+    readOne(req, res, Conversation);
   },
   //update one
   updateConversation: (req, res) => {
-    // updateOne(req,res, conversation,key,value);
+    // updateOne(req,res, Conversation,key,value);
   },
   //delete one
   deleteConversation: (req, res) => {
-    deleteOne(req, res, conversation);
+    deleteOne(req, res, Conversation);
   },
 };

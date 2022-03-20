@@ -1,4 +1,4 @@
-const post = require("../models/Post");
+const Post = require("../models/Post");
 const {
   createOne,
   readAll,
@@ -12,7 +12,7 @@ module.exports = {
   //create
   createPost: (req, res) => {
     try {
-      createOne(req, post);
+      createOne(req, Post);
       response(res, 200, "new post created");
     } catch (error) {
       response(res, 400, error);
@@ -20,18 +20,18 @@ module.exports = {
   },
   //read all
   readAllPosts: (req, res) => {
-    readAll(res, post);
+    readAll(res, Post);
   },
   //read one
   readPost: (req, res) => {
-    readOne(req, res, post);
+    readOne(req, res, Post);
   },
   //update one
   updatePost: (req, res) => {
-    // updateOne(req,res, post,key,value);
+    // updateOne(req,res, Post,key,value);
   },
   //delete one
   deletePost: (req, res) => {
-    deleteOne(req, res, post);
+    deleteOne(req, res, Post);
   },
 };
