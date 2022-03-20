@@ -6,7 +6,7 @@ const {
   updateUser,
   deleteUser,
   addFollower,
-  
+
 } = require("../controllers/user-controller");
 
 router.post("/", createUser);
@@ -15,7 +15,7 @@ router.get("/all", readAllUsers);
 
 router.get("/:id", readUser);
 
-router.get("/:id", addFollower);
+router.get("/:id/follow", addFollower);
 
 router.put("/:id", updateUser);
 

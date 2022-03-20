@@ -13,6 +13,8 @@ const userRoutes = require("./routes/user");
 const postRoutes = require("./routes/post");
 const convoRoutes = require("./routes/conversation");
 
+app.use(express.json());
+
 app.use("/api/user", userRoutes);
 app.use("/api/", postRoutes);
 app.use("/api/convo", convoRoutes);

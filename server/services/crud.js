@@ -4,7 +4,7 @@ const { response } = require("./response");
 
 module.exports = {
   createOne: async (req, model) => {
-    const newData = new model.create(req.body);
+    const newData = new model(req.body);
     await newData.save();
   },
 
