@@ -3,12 +3,12 @@ const { findone } = require("mongoose");
 const { response } = require("./response");
 
 module.exports = {
-  create: async (req, res, model) => {
+  createOne: async (req, model) => {
     const newData = new model.create(req.body);
     await newData.save();
   },
 
-  readAll: async (req, res, model) => {
+  readAll: async (res, model) => {
     try {
       //find all the saved data
       const allData = await model.find();
@@ -19,7 +19,7 @@ module.exports = {
     }
   },
 
-  readSingle: async (req, res) => {
+  readOne: async (req, res, model) => {
     try {
       //find single saved data with the id from the route paramater
       const singleData = await model.findOne(req.params.id);
@@ -30,7 +30,7 @@ module.exports = {
     }
   },
 
-  updateOne: async (req, res, key, value) => {
+  updateOne: async (req, res, model ,key, value) => {
     try {
       //find all the saved data
       const allData = await model.findOne(req.params.id);
@@ -44,7 +44,7 @@ module.exports = {
     }
   },
 
-  delete: (req, res) => {
+  deleteOne: (req, res, model) => {
     try {
       //find single data and delete
       await model.deleteOne(req.params.id);
