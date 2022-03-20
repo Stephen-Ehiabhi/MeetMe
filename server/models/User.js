@@ -5,13 +5,31 @@ const UserModel = new Schema({
     type: String,
     required: true,
   },
+  username: {
+    type: String,
+    required: true,
+  },
   email: {
-type: String,
-required: 
+    type: String,
+    required: true,
   },
+  dateofbirth: {
+    type: String,
+  },
+  followersAmount: {
+    type: Number,
+    default: 0
+  },
+  followingsAmount: {
+    type: Number,
+    default: 0
+  },
+  followers: [],
+  following: [],
   isCreated: {
-    type: new Date.now(),
-  },
+    type: Date,
+    default: new Date.now()
+  }
 });
 
 const user = model("User", UserModel);

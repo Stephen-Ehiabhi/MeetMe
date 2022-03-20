@@ -11,4 +11,85 @@ This microservice is used to create reusable CRUD functions throughout the proje
 
 ## **response.js** :
 This microservice is used to create a reusable response function.
-- **response(response,status,message)**: this methos takes in the response object, status to structure the response message and message to defin the task done
+- **response(response,status,message)**: this method takes in the response object, status to structure the response message and message to defin the task done
+## Features
+
+- Light/dark mode toggle
+- Live previews
+- Fullscreen mode
+- Cross platform
+
+
+## Route API Reference
+## Users route
+
+#### Post new User
+
+```http
+  POST /api/user/
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `none`      | `none` | none |
+
+#### Get all Users
+
+```http
+  GET /api/users
+```
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `none`      | `none` | none |
+
+#### Get single User
+
+```http
+  GET /api/user/${id}
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of user to fetch |
+
+#### Add new follower
+
+```http
+  GET /api/user/${id}?userID=${userID}
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of the current user |
+| `userID`  | `query string` | **Required**. Id of the user the current user wants to follow |
+
+#### Update single User
+
+```http
+  PUT /api/user/${id}
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of user to update |
+
+#### Delete single User
+
+```http
+  Delete /api/user/${id}
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of user to delete |
+
+
+
+## Badges
+
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
+
+- Authors
+
+- [@Stephen Ehiabhi](https://www.github.com/stephen-ehiabhi)
+
