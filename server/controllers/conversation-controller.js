@@ -13,7 +13,7 @@ module.exports = {
   createConversation: (req, res) => {
     try {
       createOne(req, conversation);
-      response(res, 200, "new post created");
+      response(res, 200, "new conversation created");
     } catch (error) {
       response(res, 400, error);
     }
