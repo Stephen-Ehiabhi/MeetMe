@@ -28,7 +28,7 @@ const UserModel = new Schema({
   following: [],
   isCreated: {
     type: Date,
-    default: new Date.now()
+    default:Date.now()
   }
 });
 

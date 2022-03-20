@@ -1,5 +1,5 @@
 //module to hide sensitive data
-const { PORT, URI } = require("./config/config.js");
+require("dotenv").config()
 
 const express = require("express");
 const app = express();
@@ -17,8 +17,10 @@ app.use("/api/user", userRoutes);
 app.use("/api/", postRoutes);
 app.use("/api/convo", convoRoutes);
 
+const PORT = process.env.PORT;
+
 //conecting database and server
-connect(URI, (err) => {
+connect(process.env.URI, (err) => {
   if (err) console.log(`Error listening on Port ${PORT}`);
   //intiating the listen method to enable server listen for requests
   server.listen(PORT, () => {

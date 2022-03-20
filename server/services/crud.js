@@ -44,7 +44,7 @@ module.exports = {
     }
   },
 
-  deleteOne: (req, res, model) => {
+  deleteOne: async (req, res, model) => {
     try {
       //find single data and delete
       await model.deleteOne(req.params.id);
