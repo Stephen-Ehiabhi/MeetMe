@@ -21,6 +21,7 @@ module.exports = {
   //add follower
   addFollower: async (req, res) => {
     try {
+
       //get user and find the user, the current user wants to follow follow
       const currentUser = await User.findOne(req.params.id);
       const followed = await User.findOne(req.query.UserId);
