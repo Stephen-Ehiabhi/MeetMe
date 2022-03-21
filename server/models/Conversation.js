@@ -13,10 +13,7 @@ const ConversationModel = new Schema({
     type: String,
     required: true,
   },
-  isCreated: {
-    type: Date,
-    default:Date.now()
-  }
+  timestamps: true,
 });
 
 const conversation = model("conversation", ConversationModel);

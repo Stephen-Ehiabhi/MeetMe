@@ -1,18 +1,22 @@
 const { Schema, model } = require("mongoose");
 
 const PostModel = new Schema({
-  text: {
+  userId: {
     type: String,
     required: true,
   },
-  email: {
+  description: {
     type: String,
-    required: true,
+    max: 500,
   },
-  isCreated: {
-    type: Date,
-    default:Date.now()
-  }
+  image: {
+    type: String,
+  },
+  likes: {
+    type: Array,
+    default: [],
+  },
+  timestamps: true,
 });
 
 const post = model("post", PostModel);

@@ -15,7 +15,7 @@ router.get("/all", readAllUsers);
 
 router.get("/:id", readUser);
 
-router.get("/:id/follow", followUser);
+router.put("/:id/follow", followUser);
 
 router.put("/:id", updateUser);
 
