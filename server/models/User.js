@@ -28,7 +28,7 @@ const UserModel = new Schema({
   following: [],
   password: {
     type: String,
-    required: true,
+   // required: true,
     min: 6,
   },
   profilePicture: {
@@ -66,9 +66,9 @@ const UserModel = new Schema({
   relationship: {
     type: Number,
     enum: [1, 2, 3],
-  },
-  timestamps: true,
-});
+  }
+},
+{timestamps: true});
 
 const user = model("user", UserModel);
 

@@ -15,9 +15,9 @@ const PostModel = new Schema({
   likes: {
     type: Array,
     default: [],
-  },
-  timestamps: true,
-});
+  }
+},
+{timestamps: true});
 
 const post = model("post", PostModel);
 

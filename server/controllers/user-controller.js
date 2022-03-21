@@ -30,7 +30,7 @@ module.exports = {
            //check if user  exists
            if (!userFound) return response(res, 409, "Incorrect email or password");
            
-           
+
 
            response(res, 201, "new user created");
          } catch (error) {
@@ -63,6 +63,20 @@ module.exports = {
   //remove follower
   unFollowUser: async (req, res) => {
     try {
+         const currentUser = await User.findOne({_id: req.params.id});
+         const friend = await User.findOne({username: req.query.username});
+         //add new follow to current user following
+         currentUser.following.pull(friend.username);
+         //update following amount
+         currentUser.followingsAmount -= 1;
+         //add new follower to the user followers
+         friend.followers.pull(currentUser.username);
+         //update followers amount
+         friend.followersAmount -= 1;
+         //save update
+         await currentUser.save();
+         await friend.save();
+         //response
       response(res, 200, `You unfollowed ${friend.username}`);
     } catch (error) {
       response(res, 400, error.message);
