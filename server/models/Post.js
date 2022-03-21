@@ -10,8 +10,9 @@ const PostModel = new Schema({
     required: true,
   },
   isCreated: {
-    type: new Date.now(),
-  },
+    type: Date,
+    default:Date.now()
+  }
 });
 
 const post = model("post", PostModel);

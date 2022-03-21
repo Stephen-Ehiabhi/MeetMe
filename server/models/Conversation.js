@@ -14,8 +14,9 @@ const ConversationModel = new Schema({
     required: true,
   },
   isCreated: {
-    type: new Date.now(),
-  },
+    type: Date,
+    default:Date.now()
+  }
 });
 
 const conversation = model("conversation", ConversationModel);
