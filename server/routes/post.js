@@ -9,7 +9,7 @@ const {
 
 router.post("/", createPost);
 
-router.get("/all", readAllPosts);
+router.get("/timeline/all", readAllPosts);
 
 router.get("/:id", readPost);
 

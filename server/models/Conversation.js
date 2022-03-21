@@ -2,17 +2,8 @@ const { Schema, model } = require("mongoose");
 
 const ConversationModel = new Schema(
   {
-    text: {
-      type: String,
-      required: true,
-    },
-    phone: {
-      type: String,
-      required: true,
-    },
-    email: {
-      type: String,
-      required: true,
+    members: {
+      type: Array,
     },
   },
   { timestamps: true }
