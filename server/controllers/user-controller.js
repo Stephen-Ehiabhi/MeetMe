@@ -1,3 +1,4 @@
+
 const User = require("../models/User");
 const {
   createOne,
@@ -22,6 +23,20 @@ module.exports = {
       response(res, 400, error.message);
     }
   },
+    //login
+    loginUser: async (req, res) => {
+         try {
+           const userFound = await User.exists({ email: req.body.email });
+           //check if user  exists
+           if (!userFound) return response(res, 409, "Incorrect email or password");
+           
+           
+
+           response(res, 201, "new user created");
+         } catch (error) {
+           response(res, 400, error.message);
+         }
+       },
   //add follower
   followUser: async (req, res) => {
     try {
