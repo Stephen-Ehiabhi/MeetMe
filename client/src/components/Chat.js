@@ -1,4 +1,13 @@
 import React from "react";
+import {
+  FiVideo,
+  FiPhoneCall,
+  FiFileText,
+  FiMic,
+  FiPaperclip,
+} from "react-icons/fi";
+import { IoImageOutline } from "react-icons/io5";
+import { RiSendPlaneFill } from "react-icons/ri";
 
 const Chat = () => {
   return (
@@ -9,10 +18,18 @@ const Chat = () => {
           <p className="chat_nav_p">Chat</p>
         </div>
         <div className="chat_nav_icons">
-          <div>{/* video chat icon*/}</div>
-          <div>{/* call icon*/}</div>
-          <div>{/* image icon*/}</div>
-          <div>{/* dcument icon*/}</div>
+          <div>
+            <FiVideo />
+          </div>
+          <div>
+            <FiPhoneCall />
+          </div>
+          <div>
+            <IoImageOutline />
+          </div>
+          <div>
+            <FiFileText />
+          </div>
         </div>
       </div>
       {/* second div */}
@@ -21,7 +38,7 @@ const Chat = () => {
           <img
             className="sender_photo"
             src="#"
-            alt="profile pictures of connected user"
+            alt="profile of connected user"
           />
           <div className="sender_message_div">
             <p className="sender_message_p">Hello there I'm grey</p>
@@ -33,9 +50,15 @@ const Chat = () => {
         <form className="send_message">
           <input className="message-input" placeholder="Your message" />
           <div className="send_message_icons">
-            <div>{/* voice note icon*/}</div>
-            <div>{/* attach icon*/}</div>
-            <div>{/*send icon*/}</div>
+            <div>
+              <FiMic />
+            </div>
+            <div>
+              <FiPaperclip />
+            </div>
+            <div>
+              <RiSendPlaneFill />
+            </div>
           </div>
         </form>
       </div>

@@ -1,11 +1,12 @@
 import React from "react";
+import { FaBeer } from "react-icons/fa";
 
 const MessageList = () => {
   return (
     <div className="message_list_cont">
       {/* first div */}
       <div className="account_div">
-        <img src="#" alt="profile pictures of account holder" />
+        <img src="#" alt="profile of account holder" />
         <div className="account_info">
           <p className="account_info_name">Stephen Ehiabhi</p>
           <p className="account_info_p">My account</p>
@@ -19,11 +20,11 @@ const MessageList = () => {
             <p className="connected_users_nav_p">10</p>
           </div>
           <div className="connected_users_photos">
-            <img src="#" alt="profile pictures of connected user" />
-            <img src="#" alt="profile pictures of connected user" />
-            <img src="#" alt="profile pictures of connected user" />
-            <img src="#" alt="profile pictures of connected user" />
-            <img src="#" alt="profile pictures of connected user" />
+            <img src="#" alt="profile of connected user" />
+            <img src="#" alt="profile of connected user" />
+            <img src="#" alt="profile of connected user" />
+            <img src="#" alt="profile of connected user" />
+            <img src="#" alt="profile of connected user" />
           </div>
         </div>
         {/* third div */}
@@ -50,7 +51,7 @@ const MessageList = () => {
         <div className="chat_list_container">
           <div className="chat_list">
             <div className="chat_list_user_photo">
-              <img src="#" alt="profile picture of a connected user" />
+              <img src="#" alt="profile of a connected user" />
             </div>
             <div className="chat_list_user_name_div">
               <div className="chat_list_user_name">
