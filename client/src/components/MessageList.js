@@ -39,29 +39,32 @@ const MessageList = () => {
           </div>
           <div className="search_message_box_div">
             <div>{/*icon*/}</div>
-            <input className="search_message_box_input" type="text" placeholder="search" />
+            <input
+              className="search_message_box_input"
+              type="text"
+              placeholder="search"
+            />
           </div>
         </div>
         {/* fourth div */}
         <div className="chat_list_container">
           <div className="chat_list">
-            <div className="chat_ist">
+            <div className="chat_list_user_photo">
               <img src="#" alt="profile picture of a connected user" />
             </div>
-            <div>
-              <div>
-                <p>Fatima presidam</p>
+            <div className="chat_list_user_name_div">
+              <div className="chat_list_user_name">
+                <p className="chat_list_user_name_p">Fatima presidam</p>
               </div>
-              <div>
+              <div className="chat_list_decr_div">
                 <div>{/*icon*/}</div>
-                <p>Fatima is typing</p>
+                <p className="chat_list_decr_p">Fatima is typing</p>
               </div>
             </div>
-            <div>
+            <div className="chat_list_new_message_icon">
               <div>{/*icon*/}</div>
             </div>
           </div>
-        </div>
         </div>
       </div>
     </div>
