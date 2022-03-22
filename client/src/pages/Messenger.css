@@ -1,0 +1,16 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*For mobiles*/
+
+@media only screen and (min-width: 600px) {
+  /*for tablets*/
+}
+
+@media only screen and (min-width: 768px) {
+  /*For desktops*/
+}
