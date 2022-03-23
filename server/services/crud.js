@@ -1,6 +1,6 @@
 const { findone } = require("mongoose");
 //components
-const { response } = require("./response");
+const response = require("./response");
 
 module.exports = {
   createOne: async (req, model) => {
@@ -15,18 +15,18 @@ module.exports = {
       //respond with success
       response(res, 200, allData);
     } catch (error) {
-      response(res, 400, error);
+      response(res, 400, error.message);
     }
   },
 
   readOne: async (req, res, model) => {
     try {
       //find single saved data with the id from the route paramater
-      const singleData = await model.findOne(req.params.id);
+      const singleData = await model.findOne({_id: req.params.id});
       //respond with success
       response(res, 200, singleData);
     } catch (error) {
-      response(res, 400, error);
+      response(res, 500, error.message);
     }
   },
 
@@ -40,7 +40,7 @@ module.exports = {
       await allData.save();
       response(res, 200, allData);
     } catch (error) {
-      response(res, 400, error);
+      response(res, 400, error.message);
     }
   },
 
@@ -51,7 +51,7 @@ module.exports = {
 
       response(res, 200, "deleted");
     } catch (error) {
-      response(res, 400, error);
+      response(res, 400, error.message);
     }
   },
 };

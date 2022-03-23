@@ -13,7 +13,7 @@ router.get("/all", readAllConversations);
 
 router.get("/:id", readConversation);
 
-router.put("/:id", updateConversation);
+//router.put("/:id", updateConversation);
 
 router.put("/:id", deleteConversation);
 

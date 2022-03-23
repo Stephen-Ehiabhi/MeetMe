@@ -1,0 +1,26 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: "border box";
+}
+
+/* Mobile view */
+
+@media screen and (min-width: 600px) {
+  /*for tablets*/
+}
+
+@media screen and (min-width: 768px) {
+  /*for desktops*/
+  .message_list_cont {
+    width: 40vw;
+  }
+
+  .account_div {
+    display: flex;
+    height: 6vw;
+    padding: 20px;
+  }
+}

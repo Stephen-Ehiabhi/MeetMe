@@ -85,6 +85,105 @@ This microservice is used to create a reusable response function.
 
 
 
+## Coversation route
+
+#### Post new User
+
+```http
+  POST /api/conversation/
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `none`      | `none` | none |
+
+#### Get all conversations
+
+```http
+  GET /api/conversation/all
+```
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `none`      | `none` | none |
+
+#### Get single conversation
+
+```http
+  GET /api/conversation/${id}
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of conversation to fetch |
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | 
+
+#### Delete single conversation
+
+```http
+  Delete /api/conversation/${id}
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of conversation to delete |
+
+
+
+## Message route
+
+#### Post new message
+
+```http
+  POST /api/message
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `none`      | `none` | none |
+
+#### Get all messages
+
+```http
+  GET /api/messages
+```
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `none`      | `none` | none |
+
+#### Get single message
+
+```http
+  GET /api/message/${id}
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of message to fetch |
+
+
+#### Update single message
+
+```http
+  PUT /api/message/${id}
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of message to update |
+
+#### Delete single message
+
+```http
+  Delete /api/message/${id}
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of message to delete |
+
+
 ## Badges
 
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
@@ -92,4 +191,5 @@ This microservice is used to create a reusable response function.
 - Authors
 
 - [@Stephen Ehiabhi](https://www.github.com/stephen-ehiabhi)
+
 

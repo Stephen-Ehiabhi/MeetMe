@@ -4,6 +4,7 @@ const { connect } = require("mongoose");
 userRoutes = require("./routes/user");
 postRoutes = require("./routes/post");
 convoRoutes = require("./routes/conversation");
+messageRoutes = require("./routes/message");
 helmet = require("helmet");
 morgan = require("morgan");
 cors = require("cors");
@@ -18,8 +19,9 @@ app.use(morgan("common"));
 app.use(cors());
 
 app.use("/api/user", userRoutes);
-app.use("/api/", postRoutes);
-app.use("/api/convo", convoRoutes);
+app.use("/api/post", postRoutes);
+app.use("/api/conversation", convoRoutes);
+app.use("/api/message", messageRoutes);
 
 //conecting database and server
 connect(
