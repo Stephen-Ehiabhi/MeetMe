@@ -30,6 +30,7 @@ const UserModel = new Schema({
     type: String,
    // required: true,
     min: 6,
+    max: 16,
   },
   profilePicture: {
     type: String,
@@ -48,6 +49,10 @@ const UserModel = new Schema({
     default: [],
   },
   isAdmin: {
+    type: Boolean,
+    default: false,
+  },
+  isVerified: {
     type: Boolean,
     default: false,
   },

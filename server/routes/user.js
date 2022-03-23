@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const {
   createUser,
+  loginUser,
   readAllUsers,
   readUser,
   updateUser,
@@ -10,6 +11,8 @@ const {
 } = require("../controllers/user-controller");
 
 router.post("/register", createUser);
+
+router.post("/login", loginUser);
 
 router.get("/all", readAllUsers);
 
