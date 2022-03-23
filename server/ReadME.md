@@ -30,6 +30,7 @@ This microservice is used to create a reusable response function.
 ```
 
 | Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
 | `none`      | `none` | none |
 
 #### Get all Users
@@ -38,6 +39,7 @@ This microservice is used to create a reusable response function.
   GET /api/users
 ```
 | Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
 | `none`      | `none` | none |
 
 #### Get single User
@@ -47,6 +49,7 @@ This microservice is used to create a reusable response function.
 ```
 
 | Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
 | `id`      | `string` | **Required**. Id of user to fetch |
 
 #### Add new follower
@@ -56,6 +59,7 @@ This microservice is used to create a reusable response function.
 ```
 
 | Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
 | `id`      | `string` | **Required**. Id of the current user |
 | `username`  | `query string` | **Required**. username of the user the current user wants to follow |
 
@@ -66,6 +70,7 @@ This microservice is used to create a reusable response function.
 ```
 
 | Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
 | `id`      | `string` | **Required**. Id of user to update |
 
 #### Delete single User
@@ -75,6 +80,7 @@ This microservice is used to create a reusable response function.
 ```
 
 | Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
 | `id`      | `string` | **Required**. Id of user to delete |
 
 
@@ -88,6 +94,8 @@ This microservice is used to create a reusable response function.
 ```
 
 | Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+:-------------------------------- |
 | `members`      | `array` | `stores the id of but users in a conversation` |
 
 
@@ -97,6 +105,7 @@ This microservice is used to create a reusable response function.
   GET /api/conversation/all
 ```
 | Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
 | `name1 & name2`      | `string` | **Required**. username of users willing to start a conversation|
 
 #### Get single conversation
@@ -106,6 +115,7 @@ This microservice is used to create a reusable response function.
 ```
 
 | Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
 | `id`      | `string` | **Required**. Id of conversation to fetch |
 
 | Parameter | Type     | Description                       |
@@ -118,6 +128,7 @@ This microservice is used to create a reusable response function.
 ```
 
 | Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
 | `id`      | `string` | **Required**. Id of conversation to delete |
 
 
@@ -131,6 +142,7 @@ This microservice is used to create a reusable response function.
 ```
 
 | Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
 | `conversationID`      | `string` | `id of the conversation. this will be used to reference all messages from simila conversations` |
 :-------------------------------- |
 | `sender`      | `id of user that sent the text` | `important to get all the senders and receivers messages` |
@@ -143,6 +155,7 @@ This microservice is used to create a reusable response function.
   GET /api/messages
 ```
 | Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
 | `none`      | `none` | none |
 
 #### Get single message
@@ -152,6 +165,7 @@ This microservice is used to create a reusable response function.
 ```
 
 | Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
 | `id`      | `string` | **Required**. Id of message to fetch |
 
 
@@ -162,6 +176,7 @@ This microservice is used to create a reusable response function.
 ```
 
 | Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
 | `id`      | `string` | **Required**. Id of message to update |
 
 #### Delete single message
@@ -171,6 +186,7 @@ This microservice is used to create a reusable response function.
 ```
 
 | Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
 | `id`      | `string` | **Required**. Id of message to delete |
 
 
