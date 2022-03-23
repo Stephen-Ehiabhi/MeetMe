@@ -8,7 +8,7 @@ const {
 
 router.post("/", createMessage);
 
-router.get("/all", readAllMessages);
+router.get("/", readAllMessages);
 
 router.get("/:id", readMessage);
 

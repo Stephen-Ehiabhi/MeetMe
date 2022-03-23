@@ -23,7 +23,7 @@ module.exports = {
     try {
       //find all the saved data
       const allData = await Message.find({
-        conversationID: req.query.conversationid,
+        conversationID: req.params.conversationid,
       });
       //respond with success
       response(res, 200, allData);

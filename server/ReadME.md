@@ -55,7 +55,7 @@ This microservice is used to create a reusable response function.
 #### Add new follower
 
 ```http
-  GET /api/user/${id}/follow?username=${username}
+  PUT /api/user/${id}/follow?username=${username}
 ```
 
 | Parameter | Type     | Description                       |
@@ -87,7 +87,7 @@ This microservice is used to create a reusable response function.
 
 ## Coversation route
 
-#### Post new User
+#### Post new Conversation
 
 ```http
   POST /api/conversation/
