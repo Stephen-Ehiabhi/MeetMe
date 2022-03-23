@@ -90,12 +90,14 @@ This microservice is used to create a reusable response function.
 #### Post new Conversation
 
 ```http
-  POST /api/conversation/
+  POST /api/conversation?name1=${username1}&name2=${username2}
 ```
 
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
-| `none`      | `none` | none |
+:-------------------------------- |
+| `members`      | `array` | `stores the id of but users in a conversation` |
+
 
 #### Get all conversations
 
@@ -104,7 +106,7 @@ This microservice is used to create a reusable response function.
 ```
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
-| `none`      | `none` | none |
+| `name1 & name2`      | `string` | **Required**. username of users willing to start a conversation|
 
 #### Get single conversation
 
@@ -141,7 +143,11 @@ This microservice is used to create a reusable response function.
 
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
-| `none`      | `none` | none |
+| `conversationID`      | `string` | `id of the conversation. this will be used to reference all messages from simila conversations` |
+:-------------------------------- |
+| `sender`      | `id of user that sent the text` | `important to get all the senders and receivers messages` |
+:-------------------------------- |
+| `message`      | `string` | `message body sender wants to send` |
 
 #### Get all messages
 
