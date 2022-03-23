@@ -14,12 +14,11 @@ module.exports = {
     const user2 = await User.findOne({
       username: req.query.name2,
       followers: { $in: [req.query.name1] },
-     });
+    });
     try {
-      console.log(user1,user2);
       if (user1 || user2) {
         createOne(req, Conversation);
-        response(res, 200, "new conversation created");
+        response(res, 200, "New conversation created");
       } else {
         response(
           res,
@@ -31,11 +30,18 @@ module.exports = {
       response(res, 500, error);
     }
   },
-  //read all
-  readAllConversations: (req, res) => {
-    readAll(res, Conversation);
+  //read all conversations for a particular user
+  readAllConversations: async (req, res) => {
+    try {
+      const userConversations = await Conversation.find({
+        members: { $in: [req.params.userId] },
+      });
+      response(res, 200, userConversations);
+    } catch (e) {
+      response(res, 500, error.message);
+    }
   },
-  //read one
+  //read one conversation between two people
   readConversation: (req, res) => {
     readOne(req, res, Conversation);
   },

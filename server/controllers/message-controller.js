@@ -1,8 +1,6 @@
 const Message = require("../models/Message");
 const {
   createOne,
-  readAll,
-  readOne,
   updateOne,
   deleteOne,
 } = require("../services/crud");
@@ -18,12 +16,12 @@ module.exports = {
       response(res, 400, error);
     }
   },
-  //read all ?conversationid=
+  //read all ?conversationId=
   readAllMessages: async (req, res) => {
     try {
       //find all the saved data
       const allData = await Message.find({
-        conversationID: req.params.conversationid,
+        conversationID: req.params.conversationId,
       });
       //respond with success
       response(res, 200, allData);
@@ -32,10 +30,6 @@ module.exports = {
     }
   },
 
-  //read one
-  readMessage: (req, res) => {
-    readOne(req, res, Message);
-  },
   //update one
   updateMessage: (req, res) => {
     // updateOne(req,res, Message,key,value);

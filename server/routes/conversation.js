@@ -9,7 +9,7 @@ const {
 
 router.post("/", createConversation);
 
-router.get("/all", readAllConversations);
+router.get("/:userId", readAllConversations);
 
 router.get("/:id", readConversation);
 

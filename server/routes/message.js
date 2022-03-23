@@ -2,18 +2,15 @@ const router = require("express").Router();
 const {
   createMessage,
   readAllMessages,
-  readMessage,
   deleteMessage,
 } = require("../controllers/Message-controller");
 
 router.post("/", createMessage);
 
-router.get("/", readAllMessages);
-
-router.get("/:id", readMessage);
+router.get("/:conversationId", readAllMessages);
 
 //router.put("/:id", updateMessage);
 
-router.put("/:id", deleteMessage);
+router.put("/:conversationId", deleteMessage);
 
 module.exports = router;
