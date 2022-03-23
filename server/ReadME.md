@@ -21,9 +21,9 @@ This microservice is used to create a reusable response function.
 
 
 ## Route API Reference
-## Users route
+# **Users route**
 
-#### Post new User
+## Post new User
 
 ```http
   POST /api/user/
@@ -33,7 +33,7 @@ This microservice is used to create a reusable response function.
 | :-------- | :------- | :-------------------------------- |
 | `none`      | `none` | none |
 
-#### Get all Users
+## Get all Users
 
 ```http
   GET /api/users
@@ -42,7 +42,7 @@ This microservice is used to create a reusable response function.
 | :-------- | :------- | :-------------------------------- |
 | `none`      | `none` | none |
 
-#### Get single User
+## Get single User
 
 ```http
   GET /api/user/${id}
@@ -52,7 +52,7 @@ This microservice is used to create a reusable response function.
 | :-------- | :------- | :-------------------------------- |
 | `id`      | `string` | **Required**. Id of user to fetch |
 
-#### Add new follower
+## Add new follower
 
 ```http
   PUT /api/user/${id}/follow?username=${username}
@@ -63,7 +63,7 @@ This microservice is used to create a reusable response function.
 | `id`      | `string` | **Required**. Id of the current user |
 | `username`  | `query string` | **Required**. username of the user the current user wants to follow |
 
-#### Update single User
+## Update single User
 
 ```http
   PUT /api/user/${id}
@@ -73,7 +73,7 @@ This microservice is used to create a reusable response function.
 | :-------- | :------- | :-------------------------------- |
 | `id`      | `string` | **Required**. Id of user to update |
 
-#### Delete single User
+## Delete single User
 
 ```http
   Delete /api/user/${id}
@@ -85,9 +85,9 @@ This microservice is used to create a reusable response function.
 
 
 
-## Coversation route
+# **Coversation route**
 
-#### Post new Conversation
+## Post new Conversation
 
 ```http
   POST /api/conversation?name1=${username1}&name2=${username2}
@@ -95,11 +95,10 @@ This microservice is used to create a reusable response function.
 
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
-:-------------------------------- |
 | `members`      | `array` | `stores the id of but users in a conversation` |
 
 
-#### Get all conversations
+## Get all conversations
 
 ```http
   GET /api/conversation/all
@@ -108,7 +107,7 @@ This microservice is used to create a reusable response function.
 | :-------- | :------- | :-------------------------------- |
 | `name1 & name2`      | `string` | **Required**. username of users willing to start a conversation|
 
-#### Get single conversation
+## Get single conversation
 
 ```http
   GET /api/conversation/${id}
@@ -118,10 +117,8 @@ This microservice is used to create a reusable response function.
 | :-------- | :------- | :-------------------------------- |
 | `id`      | `string` | **Required**. Id of conversation to fetch |
 
-| Parameter | Type     | Description                       |
-| :-------- | :------- | 
 
-#### Delete single conversation
+## Delete single conversation
 
 ```http
   Delete /api/conversation/${id}
@@ -133,9 +130,9 @@ This microservice is used to create a reusable response function.
 
 
 
-## Message route
+# **Message route**
 
-#### Post new message
+## Post new message
 
 ```http
   POST /api/message
@@ -144,12 +141,10 @@ This microservice is used to create a reusable response function.
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
 | `conversationID`      | `string` | `id of the conversation. this will be used to reference all messages from simila conversations` |
-:-------------------------------- |
 | `sender`      | `id of user that sent the text` | `important to get all the senders and receivers messages` |
-:-------------------------------- |
 | `message`      | `string` | `message body sender wants to send` |
 
-#### Get all messages
+## Get all messages
 
 ```http
   GET /api/messages
@@ -158,7 +153,7 @@ This microservice is used to create a reusable response function.
 | :-------- | :------- | :-------------------------------- |
 | `none`      | `none` | none |
 
-#### Get single message
+## Get single message
 
 ```http
   GET /api/message/${id}
@@ -169,7 +164,7 @@ This microservice is used to create a reusable response function.
 | `id`      | `string` | **Required**. Id of message to fetch |
 
 
-#### Update single message
+## Update single message
 
 ```http
   PUT /api/message/${id}
@@ -179,7 +174,7 @@ This microservice is used to create a reusable response function.
 | :-------- | :------- | :-------------------------------- |
 | `id`      | `string` | **Required**. Id of message to update |
 
-#### Delete single message
+## Delete single message
 
 ```http
   Delete /api/message/${id}
