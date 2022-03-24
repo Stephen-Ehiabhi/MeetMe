@@ -3,7 +3,7 @@
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: "border box";
+  box-sizing: border-box;
 }
 
 /* Mobile view */
@@ -15,12 +15,84 @@
 @media screen and (min-width: 768px) {
   /*for desktops*/
   .message_list_cont {
-    width: 40vw;
+    width: 30vw;
+    height: 100vh;
+    background-color: rgb(100, 136, 100);
+    color: #fff;
+    padding: 10px;
   }
 
   .account_div {
     display: flex;
-    height: 6vw;
+    height: 13vh;
     padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid white;
+  
+  }
+
+  .account_info {
+    padding-left: 14px;
+  }
+
+  .connected_users_photos {
+    display: flex;
+    width: auto;
+    box-sizing: content-box;
+    overflow: auto;
+    padding-top: 7px;
+    padding-bottom: 30px;
+  }
+
+  .connected_users_nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+  }
+
+  .round_photo {
+    width: 20%;
+    border-radius: 50%;
+    margin-left: 5px;
+  }
+
+  .account_info_name {
+    font-weight: bolder;
+    font-size: 1rem;
+  }
+
+  .account_info_p {
+    font-weight: lighter;
+    font-size: 0.8rem;
+  }
+
+  .connected_users_main {
+    height: 25vh;
+  }
+
+  .connected_users_div {
+    display: flex;
+  }
+
+  .chat_list_container {
+    height: 60vh;
+    border-top: 1px solid white;
+    margin-top: 20px;
+  }
+
+  .search_message_box_input {
+    width: 15rem;
+    height: auto;
+    border-radius: 8px;
+    outline-color: rgb(83, 145, 83);
+    padding: 9px;
+    font-size: 14px;
+    color: rgb(83, 145, 83);
+    margin: 0;
+    border: none;
+    resize: none;
+   
   }
 }

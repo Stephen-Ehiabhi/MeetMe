@@ -3,8 +3,7 @@
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: "border box";
-
+  box-sizing: border-box;
 }
 
 /* Mobile view */
@@ -21,21 +20,25 @@
     justify-content: space-between;
     width: 5vw;
     height: 100vh;
-    padding: 20px;
+    padding: 10px 20px 50px 20px;
     background-color: white;
   }
 
-  .main_icons_container{
-         display: flex;
-         flex-direction: column;
-         justify-content: space-evenly;
-         height: 60%;
+  .main_icons_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 65%;
   }
 
-  .sub_icons_container{display: flex;
-         flex-direction: column;
-         justify-content: space-between;
-         height: 15%; 
+  .sub_icons_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 15%;
   }
 
+  .main_icons_container div:hover{
+    cursor:pointer;
+  }
 }

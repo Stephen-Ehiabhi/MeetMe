@@ -8,6 +8,8 @@ import {
 } from "react-icons/fi";
 import { IoImageOutline } from "react-icons/io5";
 import { RiSendPlaneFill } from "react-icons/ri";
+import p1 from "../images/steevgrey_pp_1.jpg";
+import "./Chat.css"
 
 const Chat = () => {
   return (
@@ -19,16 +21,16 @@ const Chat = () => {
         </div>
         <div className="chat_nav_icons">
           <div>
-            <FiVideo />
+            <FiVideo size={27} color={"rgb(83, 145, 83)"}/>
           </div>
           <div>
-            <FiPhoneCall />
+            <FiPhoneCall size={27} color={"rgb(83, 145, 83)"}/>
           </div>
           <div>
-            <IoImageOutline />
+            <IoImageOutline size={27} color={"rgb(83, 145, 83)"}/>
           </div>
           <div>
-            <FiFileText />
+            <FiFileText size={27} color={"rgb(83, 145, 83)"}/>
           </div>
         </div>
       </div>
@@ -37,7 +39,7 @@ const Chat = () => {
         <div className="sender_photo-div">
           <img
             className="sender_photo"
-            src="#"
+            src={p1}
             alt="profile of connected user"
           />
           <div className="sender_message_div">
@@ -48,16 +50,18 @@ const Chat = () => {
       {/* third div */}
       <div className="send_message_div">
         <form className="send_message">
-          <input className="message-input" placeholder="Your message" />
+          <div>
+          <textarea rows="2" className="message-input" placeholder="Message" />         
+          </div>
           <div className="send_message_icons">
             <div>
-              <FiMic />
+              <FiMic size={27} color={"rgb(83, 145, 83)"}/>
             </div>
             <div>
-              <FiPaperclip />
+              <FiPaperclip size={27} color={"rgb(83, 145, 83)"}/>
             </div>
             <div>
-              <RiSendPlaneFill />
+              <RiSendPlaneFill size={27} color={"rgb(83, 145, 83)"}/>
             </div>
           </div>
         </form>

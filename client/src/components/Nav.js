@@ -15,30 +15,30 @@ const Nav = () => {
     <div className="nav_container">
       <div className="main_icons_container">
         <div>
-          <FiGrid size={27} color={"grey"}/>
+          <FiGrid size={27} color={"rgb(83, 145, 83)"}/>
         </div>
         <div>
-          <AiOutlineMessage size={27} color={"grey"}/>
+          <AiOutlineMessage size={27} color={"rgb(83, 145, 83)"}/>
         </div>
         <div>
-          <IoPeopleOutline size={27} color={"grey"}/>
+          <IoPeopleOutline size={27} color={"rgb(83, 145, 83)"}/>
         </div>
         <div>
-          <FiPhoneCall size={27} color={"grey"}/>
+          <FiPhoneCall size={27} color={"rgb(83, 145, 83)"}/>
         </div>
         <div>
-          <BsBookmarkDash size={27} color={"grey"}/>
+          <BsBookmarkDash size={27} color={"rgb(83, 145, 83)"}/>
         </div>
         <div>
-          <FiSettings size={27} color={"grey"}/>
+          <FiSettings size={27} color={"rgb(83, 145, 83)"}/>
         </div>
       </div>
       <div className="sub_icons_container">
         <div>
-          <IoAlertCircleOutline size={27} color={"grey"}/>
+          <IoAlertCircleOutline size={27} color={"rgb(83, 145, 83)"}/>
         </div>
         <div>
-          <IoExitOutline size={27} color={"grey"}/>
+          <IoExitOutline size={27} color={"rgb(83, 145, 83)"}/>
         </div>
       </div>
     </div>

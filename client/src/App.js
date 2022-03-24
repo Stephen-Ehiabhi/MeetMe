@@ -1,6 +1,6 @@
 import './App.css';
 
-import Messenger from './pages/Messenger'
+import Messenger from './pages/Messenger.js'
 
 function App() {
   return (
