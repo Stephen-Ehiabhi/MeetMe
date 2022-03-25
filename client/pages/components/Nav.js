@@ -1,4 +1,4 @@
-import React from "react";
+
 import { AiOutlineMessage } from "react-icons/ai";
 import { FiGrid, FiPhoneCall, FiSettings } from "react-icons/fi";
 import {
@@ -8,9 +8,7 @@ import {
 } from "react-icons/io5";
 import { BsBookmarkDash } from "react-icons/bs";
 
-import "./Nav.css"
-
-const Nav = () => {
+export default function Nav(){
   return (
     <div className="nav_container">
       <div className="main_icons_container">
@@ -44,5 +42,3 @@ const Nav = () => {
     </div>
   );
 };
-
-export default Nav;

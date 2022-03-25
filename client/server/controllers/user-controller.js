@@ -11,7 +11,7 @@ const {
   deleteOne,
 } = require("../services/crud");
 const response = require("../services/response");
-const sendEmail = require("../services/email");
+const sendEmail = require("../services/configureEmail");
 
 module.exports = {
   //create
@@ -37,7 +37,7 @@ module.exports = {
       //check if user  exists
       if (!userFound) return response(res, 409, "Incorrect email or password");
 
-      
+
 
       response(res, 201, "new user created");
     } catch (error) {
