@@ -1,22 +1,8 @@
-import { useEffect, useState } from "react";
 import Image from "next/image";
 import Conversation from "./Conversation";
-//import axios from "axios";
 
-export default function MessageList() {
-  const [conversations, setConversations] = useState();
-
-  /* useEffect(() => {
-    async function fetchConversations() {
-      const fetchedData = await axios.get(
-        "http://localhost:3030/api/conversation/623b6c291804ece726a6d83a"
-      );
-      setConversations(fetchedData.data.message);
-    }
-    fetchConversations();
-  }, []);*/
-
-  return (
+export default function MessageList({data}) {
+return (
     <>
       <div className="message_list_cont">
         {/* first div */}
@@ -77,10 +63,12 @@ export default function MessageList() {
           </div>
         </div> */}
           <div className="chat_list_container">
-            <Conversation name={"Stephen Ehiabhi"} image={"/p1.jpg"} />
-            <Conversation name={"Fatima presidham"} image={"/p1.jpg"} />
-            <Conversation name={"Ayodele Fabrine"} image={"/p1.jpg"} />
-          </div>
+            {
+              data.map(e=>(
+                <Conversation key={e._id} name={"Stephen Ehiabhi"} image={"/p1.jpg"} />
+              ))
+            }
+            </div>
       </div>
     </>
   );
