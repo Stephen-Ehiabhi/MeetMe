@@ -7,22 +7,34 @@ import Chat from "./components/Chat";
 
 const Messenger = () => {
   const [conversations, setConversations] = useState([]);
+  const [user, setUser] = useState({});
 
   useEffect(() => {
-    async function fetchConversations() {
+    //function to fetchuser
+    async function fetchUser() {
+     const userID = '623b6c291804ece726a6d83a'
       const fetchingData = await fetch(
-        "http://localhost:3030/api/conversation/623b6c291804ece726a6d83a"
+        `http://localhost:3030/api/user/${userID}`
       );
       const fetchedData = await fetchingData.json();
-      setConversations(fetchedData.message)
+      setUser(fetchedData.message);
+      fetchConversations(userID);
     }
-    fetchConversations();
+    fetchUser();
+
+    async function fetchConversations(ID) {
+      const fetchingData = await fetch(
+        `http://localhost:3030/api/conversation/${ID}`
+      );
+      const fetchedData = await fetchingData.json();
+      setConversations(fetchedData.message);
+    }
   }, []);
 
   return (
     <div className="messenger_cont">
       <Nav />
-      <List data={conversations}/>
+      <List conversations={conversations} currentUser={user}/>
       <Chat />
     </div>
   );

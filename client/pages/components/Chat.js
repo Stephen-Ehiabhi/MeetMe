@@ -7,15 +7,14 @@ import {
 } from "react-icons/fi";
 import { IoImageOutline } from "react-icons/io5";
 import { RiSendPlaneFill } from "react-icons/ri";
-
 import { BsDot } from "react-icons/bs";
 
-export default function Chat(){
-return (
+export default function Chat({message}) {
+  return (
     <div className="chat_cont">
       {/* first div */}
       <div className="chat_nav">
-        <div className="chat_nav_p_div" style={{display: "flex"}}>
+        <div className="chat_nav_p_div" style={{ display: "flex" }}>
           <p className="chat_nav_p">Chat</p>
           <BsDot size={36} color={"rgb(83, 145, 83)"} />
         </div>
@@ -37,7 +36,7 @@ return (
       {/* second div */}
       <div className="conversations_div">
         <div className="sender_photo-div">
-         {/* <img
+          {/* <img
             className="sender_photo"
             src={p1}
             alt="profile of connected user"
@@ -72,4 +71,4 @@ return (
       </div>
     </div>
   );
-};
+}
